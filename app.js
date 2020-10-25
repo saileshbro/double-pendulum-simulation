@@ -3,5 +3,10 @@ form.addEventListener('input', handleInput)
 function handleInput(e) {
   e.preventDefault()
   const parent = e.target.parentElement
-  parent.querySelector('output').value = e.target.value
+  if (e.target.id == 'damping') {
+    parent.querySelector('output').value =
+      (+e.target.value * 100).toFixed(4) + '%'
+  } else {
+    parent.querySelector('output').value = e.target.value
+  }
 }
