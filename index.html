@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>double-pendulum-simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+
+
+  </head>
+  <body>
+    <form class="controls">
+      <label for="l1">
+        <div class="label-head">
+          <p>Length <code>l<sub>1</sub></code></p>
+          <output class="rangevalue">100</output>
+        </div>
+        <input type="range" min="20" max="200" step="1" value="100" class="slider" id="l1">
+      </label>
+      <label for="l2">
+        <div class="label-head">
+          <p>Length <code>l<sub>2</sub></code></p>
+          <output class="rangevalue">150</output>
+        </div>
+        <input type="range" min="20" max="200" step="1" value="150" class="slider" id="l2">
+      </label>
+      <label for="m1">
+        <div class="label-head">
+          <p>Mass <code>m<sub>1</sub></code></p>
+          <output class="rangevalue">10</output>
+        </div>
+        <input type="range" min="1" max="50" step="1" value="10" class="slider" id="m1">
+      </label>
+      <label for="m2">
+        <div class="label-head">
+          <p>Mass <code>m<sub>2</sub></code></p>
+          <output class="rangevalue">30</output>
+        </div>
+          <input type="range" min="1" max="50" step="1" value="30" class="slider" id="m2">
+      </label>
+      <label for="g">
+        <div class="label-head">
+          <p>Gravity <code>g</code></p>
+          <output class="rangevalue">0.5</output>
+        </div>
+        <input type="range" min="0.1" max="1" value="0.50" step="0.01" class="slider" id="g">
+      </label>
+      <label for="g">
+        <div class="label-head">
+          <p>Damping</p>
+          <output class="rangevalue">0.99990</output>
+        </div>
+        <input type="range" min="0.99900" max="0.99999" value="0.99990" step="0.00001" class="slider" id="damping">
+      </label>
+    </form>
+    <script src="sketch.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
